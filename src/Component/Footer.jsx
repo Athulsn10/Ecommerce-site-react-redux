@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 
 function Footer() {
   return (
-    <Container fluid className="footer">
+    <Container fluid className="footer mt-5">
       <Row className="footer-content justify-content-center">
         <Col md={4} sm={12} className="website mt-3 ">
           <h3>E Cart</h3>
