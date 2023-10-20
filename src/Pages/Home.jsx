@@ -3,6 +3,7 @@ import { useDispatch} from 'react-redux';
 import { Row, Col,Button, Card } from 'react-bootstrap';
 import useFetch from '../Hooks/useFetch';
 import { addToWishlist } from '../redux/slices/wishlistSlice';
+import { addToCart } from '../redux/slices/cartSlice';
 
 function Home() {
   const data = useFetch("https://dummyjson.com/products");
@@ -26,7 +27,7 @@ function Home() {
                       <Button onClick={()=>dispatch(addToWishlist(product))} style={{ backgroundColor: 'transparent', border: 'none' }} className='btn p-0 me-3'>
                         <i className="fs-5 fa-solid fa-heart ms-1" style={{ color: '#ff0000' }}></i>
                       </Button>
-                      <Button style={{ backgroundColor: 'transparent', border: 'none' }} className='btn p-0'>
+                      <Button onClick={()=>dispatch(addToCart(product))} style={{ backgroundColor: 'transparent', border: 'none' }} className='btn p-0'>
                         <i className="fs-5 fa-solid fa-cart-shopping ms-1" style={{ color: '#00fffb' }}></i>
                       </Button>
                     </div>
